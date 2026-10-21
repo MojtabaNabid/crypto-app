@@ -1,0 +1,19 @@
+.container table {
+    width: 800px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.container tr {
+    margin-bottom: 40px;
+    border: 1px solid red;
+}
+
+.container td, .container th{
+    padding: 5px;
+    margin-left: 30px;
+    border: 1px solid red;
+}
+.container img {
+    width: 20px;
+}
