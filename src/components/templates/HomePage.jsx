@@ -10,7 +10,7 @@ function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   // lifting state up, because we want to use this state both in pagination and in cryptoApi.js
   const [page, setPage] = useState(1);
-  const [currency, setCurrency] = useState("usd")
+  const [currency, setCurrency] = useState("usd");
 
   useEffect(() => {
     setIsLoading(true); // every time that page loads, loading will show up again
@@ -27,7 +27,7 @@ function HomePage() {
   return (
     <div>
       <Search currency={currency} setCurrency={setCurrency} />
-      <TableCoins coins={coins} isLoading={isLoading} />
+      <TableCoins coins={coins} isLoading={isLoading} currency={currency} />
       <Pagination page={page} setPage={setPage} />
     </div>
   );
