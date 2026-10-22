@@ -2,7 +2,7 @@ import styles from "./TableCoins.module.css";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 
-import { InfinitySpin } from "react-loader-spinner"
+import { InfinitySpin } from "react-loader-spinner";
 
 function TableCoins({ coins, isLoading }) {
   //   console.log(coins);
@@ -10,9 +10,9 @@ function TableCoins({ coins, isLoading }) {
     <div className={styles.container}>
       {isLoading ? (
         <InfinitySpin width="200" color="#3874ff" />
-        // <p>is Loading ...</p>
       ) : (
-        <table>
+        // <p>is Loading ...</p>
+        <table className={styles.table}>
           <thead>
             <tr>
               <th>Coin</th>
@@ -52,16 +52,18 @@ function TableRow({
   return (
     <tr>
       <td>
-        <div>
+        <div className={styles.symbol}>
           <img src={image} alt={name} />
           <span>{symbol.toUpperCase()}</span>
         </div>
       </td>
       <td>{name}</td>
-      <td>$ {current_price.toLocaleString()}</td>
+      <td>${current_price.toLocaleString()}</td>
       {/* for seperating price numbers toLocaleString() used */}
-      <td>{price_change.toFixed(2)} %</td>
-      <td>$ {total_volume.toLocaleString()}</td>
+      <td className={price_change > 0 ? styles.success : styles.error}>
+        {price_change.toFixed(2)}%
+      </td>
+      <td>${total_volume.toLocaleString()}</td>
       <td>
         <img src={price_change > 0 ? chartUp : chartDown} />
       </td>
