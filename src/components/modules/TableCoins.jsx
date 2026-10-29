@@ -10,7 +10,6 @@ function TableCoins({ coins, isLoading, currency }) {
       {isLoading ? (
         <RotatingLines height="96" width="96" color="#3874ff" strokeWidth="4" />
       ) : (
-        // <p>is Loading ...</p>
         <table className={styles.table}>
           <thead>
             <tr>
