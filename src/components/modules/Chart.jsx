@@ -16,6 +16,12 @@ import { convertData } from "../../helpers/converData";
 function Chart({ chart, setChart }) {
   const [type, setType] = useState("prices");
 
+  const typeHandler = (event) => {
+    if (event.target.tagName === "BUTTON") {
+        const type = event.target.innerText.toLowerCase().replace(" ", "_");         
+        setType(type);
+    }
+  }
   return (
     <div className={styles.container}>
       <span className={styles.cross} onClick={() => setChart(null)}>
@@ -29,10 +35,10 @@ function Chart({ chart, setChart }) {
         <div className={styles.graph}>
           <ChartComponent data={convertData(chart, type)} type={type} />
         </div>
-        <div className={styles.types}>
-            <button>Prices</button>
-            <button>Market Caps</button>
-            <button>Total Volums</button>
+        <div className={styles.types} onClick={typeHandler}>
+            <button className={type === "prices" ? styles.selected : null}>Prices</button>
+            <button className={type === "market_caps" ? styles.selected : null}>Market Caps</button>
+            <button className={type === "total_volumes" ? styles.selected : null}>Total Volumes</button>
         </div>
         <div className={styles.details}>
             <div>
