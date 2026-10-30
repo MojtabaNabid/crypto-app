@@ -29,7 +29,7 @@ function TableRow(props) {
     try {
       const res = await fetch(marketChart(id))
       const json = await res.json();
-      // console.log(json)
+      // console.log(json.prices)
       setChart(json)
       
     } catch (error) {
