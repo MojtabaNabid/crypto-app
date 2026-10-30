@@ -1,8 +1,12 @@
-import HomePage from "./components/templates/HomePage"
-
+import HomePage from "./components/templates/HomePage";
+import Layouts from "./Layouts/Layouts";
 
 function App() {
-  return <HomePage />
+  return (
+    <Layouts>
+      <HomePage />
+    </Layouts>
+  );
 }
 
-export default App
+export default App;

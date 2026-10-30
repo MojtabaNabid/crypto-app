@@ -23,7 +23,7 @@ function Search({ currency, setCurrency }) {
         const res = await fetch(searchCoin(text), {
           signal: controller.signal,
         });
-        const json = await res.json();
+        const json = await res.json(); 
 
         if (json.coins) {
           setLoading(false);

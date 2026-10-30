@@ -2,10 +2,10 @@ import styles from "./TableCoins.module.css";
 
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
+import { marketChart } from "../../services/cryptoApi";
 
-function TableRow(props) {
+function TableRow({ coin, setChart, currency }) {
   const {
-    coin: {
       id,
       image,
       name,
@@ -13,9 +13,7 @@ function TableRow(props) {
       current_price,
       price_change_percentage_24h: price_change, //because its name is too long
       total_volume,
-    },
-    currency,
-  } = props;
+  } = coin;
 
   const currencyHandle = (currency) => {
     if (currency === "usd") return "$";
@@ -23,10 +21,21 @@ function TableRow(props) {
     else if (currency === "jpy") return "¥";
   };
 
+  const showHandler = async () => {
+    try {
+      const res = await fetch(marketChart(id));
+      const json = await res.json();
+      // console.log(json.prices)
+      setChart({...json, coin});
+    } catch (error) {
+      setChart(null);
+    }
+  };
+
   return (
     <tr>
       <td>
-        <div className={styles.symbol}>
+        <div className={styles.symbol} onClick={showHandler}>
           <img src={image} alt={name} />
           <span>{symbol.toUpperCase()}</span>
         </div>

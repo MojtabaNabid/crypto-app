@@ -6,4 +6,7 @@ const getCoinList = (page, currency) =>
 
 const searchCoin = (query) => `${BASE_URL}/search?query=${query}`;
 
-export { getCoinList, searchCoin };
+const marketChart = (coin) =>
+  `${BASE_URL}/coins/${coin}/market_chart?vs_currency=usd&days=1`;
+
+export { getCoinList, searchCoin, marketChart };
