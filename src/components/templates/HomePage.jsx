@@ -13,7 +13,8 @@ function HomePage() {
   const [page, setPage] = useState(1);
   const [currency, setCurrency] = useState("usd");
   const [chart, setChart] = useState(null);
-
+  
+  
   useEffect(() => {
     setIsLoading(true); // every time that page loads, loading will show up again
     const getData = async () => {

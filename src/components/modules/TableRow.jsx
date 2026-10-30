@@ -2,6 +2,7 @@ import styles from "./TableCoins.module.css";
 
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
+import { marketChart } from "../../services/cryptoApi";
 
 function TableRow(props) {
   const {
@@ -24,8 +25,16 @@ function TableRow(props) {
     else if (currency === "jpy") return "¥";
   };
 
-  const showHandler = () => {
-    setChart(true)
+  const showHandler = async () => {
+    try {
+      const res = await fetch(marketChart(id))
+      const json = await res.json();
+      // console.log(json)
+      setChart(json)
+      
+    } catch (error) {
+      setChart(null)
+    }
   }
 
   return (
