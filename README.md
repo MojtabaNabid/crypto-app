@@ -1,100 +1,75 @@
 # Crypto App 📈
 
-A cryptocurrency dashboard built with **React** and **Vite**. This project explores API-driven interfaces, reusable React components, and data visualization for cryptocurrency information.
+A cryptocurrency dashboard built with **React** and **Vite**, focused on exploring market data through a clean, interactive interface.
 
-## ✨ Features
+This project is a hands-on exercise in building API-driven React applications, organizing reusable UI components, and presenting financial data with charts.
 
-- **Cryptocurrency browsing** — explore cryptocurrency information in a clean interface.
-- **Coin search** — look up cryptocurrencies by name or symbol.
-- **Data visualization** — display cryptocurrency data using Recharts.
-- **Loading feedback** — provide visual loading states while requests are in progress.
-- **Component-based architecture** — organize the UI with reusable React components.
+## Features
 
-> **Project status:** Actively developed. Features and UI may change as the project evolves.
+- **Explore cryptocurrencies** — browse cryptocurrency information in a straightforward dashboard.
+- **Search coins** — find cryptocurrencies by name or symbol.
+- **Visualize data** — explore cryptocurrency data with charts built using Recharts.
+- **Loading states** — display feedback while data is being fetched.
+- **Reusable components** — keep the interface organized with a component-based React structure.
 
-## 🛠️ Tech Stack
+> **Status:** Work in progress. Features and UI may evolve.
 
-| Technology | Purpose |
+## Tech Stack
+
+| Technology | Usage |
 | --- | --- |
-| React 19 | User interface and component state |
-| Vite | Development server and production builds |
+| React 19 | UI components and state |
 | JavaScript | Application logic |
+| Vite | Development and build tooling |
 | Recharts | Data visualization |
 | React Loader Spinner | Loading indicators |
-| ESLint | Code quality and linting |
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js and npm installed on your machine
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/MojtabaNabid/crypto-app.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd crypto-app
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the local URL shown in your terminal (typically `http://localhost:5173`).
-
-## 📜 Available Scripts
-
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Create a production build |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint checks |
+| ESLint | Code linting |
 
 ## 📸 Screenshots
 
 ![Crypto App dashboard](./public/cryptoApp.png)
 
+## Getting Started
 
-## 🎯 Learning Goals
+**Prerequisites:** Node.js and npm.
 
-This project is an opportunity to practice:
+```bash
+# Clone the repository
+git clone https://github.com/MojtabaNabid/crypto-app.git
 
-- Building reusable React components
-- Managing component state and side effects with React Hooks
+# Enter the project folder
+cd crypto-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open the local URL printed in your terminal (typically `http://localhost:5173`).
+
+### Available Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+
+## What I'm Practicing
+
 - Fetching and displaying data from APIs
-- Handling asynchronous requests and loading states
-- Visualizing data in interactive charts
-- Structuring and maintaining a modern frontend project
+- Working with React Hooks and asynchronous requests
+- Building reusable, maintainable UI components
+- Communicating loading states to users
+- Visualizing datasets with charts
 
-## 🔮 Possible Future Improvements
+## Next Steps
 
-- Favorites or watchlist functionality
-- Additional chart time ranges
-- Improved filtering and sorting
-- More detailed cryptocurrency pages
-- Accessibility and responsive UI refinements
+Potential improvements include a favorites/watchlist feature, expanded filtering and sorting, additional chart time ranges, and accessibility refinements.
 
-## 👨‍💻 Author
+## Author
 
-**Mojtaba Nabid**  
-GitHub: [@MojtabaNabid](https://github.com/MojtabaNabid)
-
----
-
-If you find this project useful, feel free to give it a ⭐!
+**Mojtaba Nabid** · [GitHub](https://github.com/MojtabaNabid)
